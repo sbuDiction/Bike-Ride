@@ -1,15 +1,20 @@
 package models;
 
-import bicycles.Bicycle;
-//import bicycles.Bicycle.*;
+public class RoadBike {
 
-public abstract class RoadBike implements Bicycle {
-        public void accelerate () {
-//        speed = speed + 5;
-        System.out.println(speed + " " + "speed increased");
+    private int speed;
+
+    public void accelerate () {
+        speed = speed + 11;
+        System.out.println(speed + " " + "Road bike speed");
     }
-        public void brake () {
-//        speed = speed - 3;
-        System.out.println(speed + " " + "speed decreased");
+
+    public void brake () {
+        speed = speed - 4;
+        System.out.println(speed + " " + "Slowing down");
+    }
+
+    public int currentSpeed() {
+        return speed;
     }
 }
