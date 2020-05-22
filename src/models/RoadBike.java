@@ -1,20 +1,14 @@
 package models;
 
-public class RoadBike {
+import bicycles.BicycleBase;
 
-    private int speed;
+public class RoadBike extends BicycleBase {
 
     public void accelerate () {
-        speed = speed + 11;
-        System.out.println(speed + " " + "Road bike speed");
+        changeSpeed(11);
     }
 
     public void brake () {
-        speed = speed - 4;
-        System.out.println(speed + " " + "Slowing down");
-    }
-
-    public int currentSpeed() {
-        return speed;
+        changeSpeed(-4);
     }
 }

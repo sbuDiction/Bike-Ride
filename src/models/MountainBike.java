@@ -1,19 +1,13 @@
 package models;
 
-public class MountainBike  {
+import bicycles.BicycleBase;
 
-    private int speed;
+public class MountainBike extends BicycleBase {
+        public void accelerate() {
+            changeSpeed(5);
+        }
 
-    public void accelerate () {
-        speed = speed + 5;
-        System.out.println(speed + " " + "Mountain bike speed");
-    }
-    public void brake () {
-        speed = speed - 3;
-        System.out.println(speed + " " + "Slowing down");
-    }
-
-    public int currentSpeed() {
-        return speed;
-    }
+        public void brake() {
+            changeSpeed(-4);
+        }
 }

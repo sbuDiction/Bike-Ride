@@ -1,6 +1,5 @@
 package bicycles;
 
-import models.MountainBike;
 import models.RoadBike;
 import org.junit.jupiter.api.Test;
 
@@ -13,5 +12,13 @@ public class RoadBikeTest {
         RoadBike roadBike = new RoadBike();
         roadBike.accelerate();
         assertEquals(roadBike.currentSpeed(),11,"Should return the current speed of a Road bike");
+    }
+
+    @Test
+    public void shouldAccelerateAndBrakeCorrect() {
+        RoadBike roadBike = new RoadBike();
+        roadBike.accelerate();
+        roadBike.brake();
+        assertEquals(roadBike.currentSpeed(),7,"Should be able to accelerate and brake correct.");
     }
 }
