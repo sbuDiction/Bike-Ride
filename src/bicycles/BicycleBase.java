@@ -8,11 +8,13 @@ public abstract class BicycleBase implements Bicycle  {
         speed += bicycleSpeed;
     }
 
+    @Override
     public int currentSpeed() {
         System.out.println(speed + " speed level");
         return speed;
     }
 
+    @Override
     public void stop() {
         speed = 0;
     }
