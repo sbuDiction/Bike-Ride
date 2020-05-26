@@ -21,9 +21,5 @@ public class BicycleFromSpec extends BicycleBase {
     public void brake() {
         changeSpeed(- this.brakeSpeed);
     }
-
-    @Override
-    public void stop() {
-       this.accelerationSpeed = 0;
-    }
+    
 }
