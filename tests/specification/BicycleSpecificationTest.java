@@ -11,12 +11,6 @@ public class BicycleSpecificationTest {
         BicycleSpecification bicycleSpecification = new BicycleSpecification(20,5);
 
         assertEquals(bicycleSpecification.getAccelerationSpeed(),20,"Should be able to get the acceleration speed");
-    }
-
-    @Test
-    public void shouldGetAccelerationSpeeds() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(20,5);
-        assertEquals(bicycleSpecification.getAccelerationSpeed(),20,"Should be able to get the acceleration speed");
-
+        assertEquals(bicycleSpecification.getBrakeSpeed(),5,"Should be able to get the brake speed");
     }
 }

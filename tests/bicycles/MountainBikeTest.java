@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MountainBikeTest {
     @Test
     public void shouldAccelerate() {
-
         MountainBike mountainBike = new MountainBike();
         mountainBike.accelerate();
+
         assertEquals(mountainBike.currentSpeed(),5,"Should return the current speed for Mountain bike");
     }
 
@@ -19,6 +19,7 @@ public class MountainBikeTest {
         MountainBike mountainBike = new MountainBike();
         mountainBike.accelerate();
         mountainBike.brake();
+
         assertEquals(mountainBike.currentSpeed(),1,"Should be able to accelerate and brake correct.");
     }
 }
