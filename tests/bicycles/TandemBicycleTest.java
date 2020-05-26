@@ -10,7 +10,6 @@ public class TandemBicycleTest {
 
     @Test
     public void shouldAccelerate() {
-
         Tandem tandem = new Tandem();
         tandem.accelerate();
         assertEquals(tandem.currentSpeed(),12,"Should return the current speed of a Tandem bike");
