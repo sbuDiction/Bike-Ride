@@ -21,5 +21,5 @@ public class BicycleFromSpec extends BicycleBase {
     public void brake() {
         changeSpeed(- this.brakeSpeed);
     }
-    
+
 }
