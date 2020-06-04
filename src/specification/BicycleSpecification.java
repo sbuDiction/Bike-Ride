@@ -2,7 +2,11 @@ package specification;
 
 import models.BicycleType;
 
+<<<<<<< HEAD
 public class    BicycleSpecification {
+=======
+public class BicycleSpecification {
+>>>>>>> 43d820e39a812f90d9fe1e580619020cd2b5812b
     private int accelerationSpeed;
     private int brakeSpeed;
     private BicycleType bicycleType;
