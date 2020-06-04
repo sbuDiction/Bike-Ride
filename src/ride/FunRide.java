@@ -6,7 +6,7 @@ import models.BicycleType;
 import java.util.ArrayList;
 
 public class FunRide {
-    private int bikesLimit;
+    private int bikesLimit = 0;
     private ArrayList bikes = new ArrayList<Bicycle>();
 
     public FunRide(int bikesLimit) {
@@ -14,10 +14,12 @@ public class FunRide {
     }
 
     public void accept(Bicycle bicycle) {
-
+        
     }
 
     public void getCountForType(BicycleType bicycleType) {}
 
-    public void getEnteredCount() {}
+    public int getEnteredCount() {
+        return bikesLimit;
+    }
 }
