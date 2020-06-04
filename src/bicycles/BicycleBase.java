@@ -1,8 +1,11 @@
 package bicycles;
 
+import models.BicycleType;
+
 public abstract class BicycleBase implements Bicycle  {
 
     private int speed;
+    private BicycleType bicycleType;
 
     protected void changeSpeed(int bicycleSpeed) {
         speed += bicycleSpeed;
@@ -17,5 +20,10 @@ public abstract class BicycleBase implements Bicycle  {
     @Override
     public void stop() {
         speed = 0;
+    }
+
+    @Override
+    public BicycleType getBicycleType() {
+        return bicycleType;
     }
 }
