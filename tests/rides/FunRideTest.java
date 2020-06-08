@@ -63,4 +63,17 @@ public class FunRideTest {
 
         assertEquals(funRide.getCountForType(BicycleType.RoadBike),4);
     }
+
+    @Test
+    public void errorHandlingForFunRide() {
+        FunRide funRide = new FunRide(5);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+
+        assertEquals(funRide.getErrorMsg(),"Sorry the fun ride is closed");
+    }
 }
