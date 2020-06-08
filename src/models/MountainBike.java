@@ -3,7 +3,6 @@ package models;
 import bicycles.BicycleBase;
 
 public class MountainBike extends BicycleBase {
-    private BicycleType bicycleType;
 
     @Override
     public void accelerate() {
@@ -15,8 +14,5 @@ public class MountainBike extends BicycleBase {
 
     }
 
-    @Override
-    public BicycleType getBicycleType() {
-        return bicycleType;
-    }
+
 }

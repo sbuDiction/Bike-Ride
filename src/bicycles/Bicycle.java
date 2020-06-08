@@ -1,6 +1,5 @@
 package bicycles;
 
-import models.BicycleType;
 
 public interface Bicycle {
 
@@ -8,5 +7,4 @@ public interface Bicycle {
       void brake();
       int currentSpeed();
       void stop();
-      BicycleType getBicycleType();
 }

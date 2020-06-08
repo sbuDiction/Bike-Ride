@@ -1,11 +1,6 @@
 package rides;
 
-import bicycles.Bicycle;
-import bicycles.BikeRideOne;
 import models.BicycleType;
-import models.MountainBike;
-import models.RoadBike;
-import models.Tandem;
 import org.junit.jupiter.api.Test;
 import ride.FunRide;
 
@@ -15,11 +10,57 @@ public class FunRideTest {
 
     @Test
     public void shouldAddBikesToFunRide() {
+        FunRide funRide = new FunRide(5);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.getCountForType(BicycleType.Tandem);
+
+        assertEquals(funRide.getEnteredCount(),5);
+
+    }
+
+    @Test
+    public void getCountForTypeMountainBike() {
+        FunRide funRide = new FunRide(10);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.getCountForType(BicycleType.MountainBike);
+
+        assertEquals(funRide.getCountForType(BicycleType.MountainBike),3);
+    }
+
+    @Test
+    public void getCountForTypeTandem() {
         FunRide funRide = new FunRide(10);
         funRide.accept(BicycleType.MountainBike);
         funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.Tandem);
+        funRide.getCountForType(BicycleType.Tandem);
 
-        assertEquals(funRide.getEnteredCount(),10);
+        assertEquals(funRide.getCountForType(BicycleType.Tandem),7);
+    }
 
+    @Test
+    public void getCountForTypeRoadBike() {
+        FunRide funRide = new FunRide(8);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.getCountForType(BicycleType.RoadBike);
+
+        assertEquals(funRide.getCountForType(BicycleType.RoadBike),4);
     }
 }

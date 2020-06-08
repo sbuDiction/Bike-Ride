@@ -28,9 +28,5 @@ public class BicycleFromSpec extends BicycleBase {
         accelerationSpeed = 0;
     }
 
-    @Override
-    public BicycleType getBicycleType() {
-        return null;
-    }
 
 }
