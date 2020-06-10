@@ -11,6 +11,7 @@ function get_user_pass() {
          git status
          git add .
          git commit -m "Automated commit"
+         git push origin master
 
     else
          echo "Access denied."
