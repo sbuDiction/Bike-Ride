@@ -16,13 +16,14 @@ public class FunRide {
 
     }
 
-    public void accept(BicycleType bicycle) {
+    public boolean accept(BicycleType bicycle) {
         if ((bikes.size() < bikesLimit)) {
             bikes.add(bicycle);
             count++;
         }else {
             errorMsg = "Sorry the fun ride is closed";
         }
+        return true;
     }
 
     public int getCountForType(BicycleType bicycleType) {
