@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function get_user_pass() {
-    read -r -p "Enter a password " password
+  read -r -p "Enter a password " password
     if test "$password" = "codex123"
-    then
+      then
          echo "Password verified."
 #         check if github sever reachable than execute.
          timeout 5 ping github.com
@@ -11,11 +11,11 @@ function get_user_pass() {
          git status
          git add .
          git commit -m "Automated commit"
-         git push origin master
-
-    else
+#         git push origin master
+         echo "Success....."
+      else
          echo "Access denied."
     fi
 }
-
+#invoking method.
 get_user_pass
