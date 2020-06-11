@@ -16,8 +16,6 @@ public class FunRide {
     }
 
     public boolean accept(Bicycle bicycle) {
-//        System.out.println(bicycle);
-//        BicycleType bicycleType = bicycle.getBicycleType();
         System.out.println(bicycle.getBicycleType() + " accept method");
         if ((bikes.size() < bikesLimit)) {
             bikes.add(bicycle);
@@ -30,14 +28,11 @@ public class FunRide {
     }
 
     public int getCountForType(BicycleType bicycleType) {
-        System.out.println(bicycleType + " input");
         int countFor = 0;
         System.out.println(bikes);
         for (Bicycle object : bikes) {
-            System.out.println(object.getBicycleType() == bicycleType);
             if (object.getBicycleType() == bicycleType) {
                 countFor++;
-                System.out.println(countFor + "count for bikes");
             }
         }
         return countFor;
