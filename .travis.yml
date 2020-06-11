@@ -1,4 +1,8 @@
 language: java
 jdk: openjdk11
-before_install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install: true
+script: mvn install:install-file "-Dfile=cobra.jar" "-DgroupId=com.cobra" "-DartifactId=cobra" "-Dversion=0.98.4" "-Dpackaging=jar" "-DgeneratePom=true"
+
+cache:
+  directories:
+    - $HOME/.m2
