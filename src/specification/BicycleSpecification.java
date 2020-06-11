@@ -26,7 +26,7 @@ public class BicycleSpecification {
     }
 
     public BicycleType getBicycleType(){
-        System.out.println(bicycleType);
+        System.out.println(bicycleType + " type what");
         return bicycleType;
     }
 }
