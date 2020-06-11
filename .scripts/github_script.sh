@@ -10,7 +10,8 @@ function get_user_pass() {
          echo "Git hub sever working..."
          git status
          git add .
-         git commit -m "Automated commit"
+         read -r -p "Enter commit statement? " str
+         git commit -m "${str}"
          git push origin master
          echo "Success....."
       else
