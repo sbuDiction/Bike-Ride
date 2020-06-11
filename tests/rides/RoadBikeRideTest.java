@@ -1,7 +1,6 @@
 package rides;
 
 import bicycles.BikeRideOne;
-import models.BicycleType;
 import models.RoadBike;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +11,7 @@ public class RoadBikeRideTest {
     @Test
     public void shouldTakeRoadBikeForRide() {
         BikeRideOne bikeRideOne = new BikeRideOne();
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
+        RoadBike roadBike = new RoadBike();
         bikeRideOne.ride(roadBike);
         bikeRideOne.ride(roadBike);
 

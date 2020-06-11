@@ -22,4 +22,9 @@ public abstract class BicycleBase implements Bicycle  {
         speed = 0;
     }
 
+    @Override
+    public BicycleType getBicycleType() {
+        return bicycleType;
+    }
+
 }

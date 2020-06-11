@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class FunRide {
     private int bikesLimit;
-    private int count = 0;
+
     private ArrayList<Bicycle> bikes = new ArrayList<Bicycle>();
 
     public FunRide(int bikesLimit) {
@@ -16,11 +16,9 @@ public class FunRide {
     }
 
     public boolean accept(Bicycle bicycle) {
-        System.out.println(bicycle.getBicycleType() + " accept method");
+        System.out.println(bicycle);
         if ((bikes.size() < bikesLimit)) {
             bikes.add(bicycle);
-            count++;
-            System.out.println(count);
         }else {
             return false;
         }
@@ -29,7 +27,6 @@ public class FunRide {
 
     public int getCountForType(BicycleType bicycleType) {
         int countFor = 0;
-        System.out.println(bikes);
         for (Bicycle object : bikes) {
             if (object.getBicycleType() == bicycleType) {
                 countFor++;

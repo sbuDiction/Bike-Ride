@@ -1,9 +1,10 @@
 package specification;
 
 import models.BicycleType;
+import models.RoadBike;
 
 
-public class BicycleSpecification {
+public class BicycleSpecification extends RoadBike {
 
     private int accelerationSpeed;
     private int brakeSpeed;

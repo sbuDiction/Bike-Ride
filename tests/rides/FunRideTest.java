@@ -1,10 +1,8 @@
 package rides;
 
 import models.BicycleType;
-import models.MountainBike;
-import models.RoadBike;
-import models.Tandem;
 import org.junit.jupiter.api.Test;
+import specification.BicycleSpecification;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,10 +10,12 @@ public class FunRideTest {
 
     @Test
     public void shouldAddBikesToFunRide() {
+        BicycleSpecification mountainBike = new BicycleSpecification(2,1,BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(7,5,BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(6,3,BicycleType.RoadBike);
+
         FunRide funRide = new FunRide(5);
-        MountainBike mountainBike = new MountainBike(BicycleType.MountainBike);
-        Tandem tandem = new Tandem(BicycleType.Tandem);
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
+
         funRide.accept(mountainBike);
         funRide.accept(mountainBike);
         funRide.accept(tandem);
@@ -27,25 +27,29 @@ public class FunRideTest {
 
     @Test
     public void getCountForTypeMountainBike() {
+        BicycleSpecification mountainBike = new BicycleSpecification(6,3,BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(6,3,BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(6,3,BicycleType.RoadBike);
+
         FunRide funRide = new FunRide(10);
-        MountainBike mountainBike = new MountainBike(BicycleType.MountainBike);
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
-        Tandem tandem = new Tandem(BicycleType.Tandem);
+
         funRide.accept(mountainBike);
         funRide.accept(mountainBike);
         funRide.accept(mountainBike);
         funRide.accept(roadBike);
         funRide.accept(tandem);
 
-        assertEquals(funRide.getCountForType(BicycleType.MountainBike),3);
+        assertEquals(funRide.getCountForType(mountainBike.getBicycleType()),3);
     }
 
     @Test
     public void getCountForTypeTandem() {
+        BicycleSpecification mountainBike = new BicycleSpecification(3,2,BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(7,4,BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(5,3,BicycleType.RoadBike);
         FunRide funRide = new FunRide(10);
-        MountainBike mountainBike = new MountainBike(BicycleType.MountainBike);
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
-        Tandem tandem = new Tandem(BicycleType.Tandem);
+
+
         funRide.accept(mountainBike);
         funRide.accept(roadBike);
         funRide.accept(tandem);
@@ -55,17 +59,17 @@ public class FunRideTest {
         funRide.accept(tandem);
         funRide.accept(tandem);
         funRide.accept(tandem);
-        funRide.getCountForType(BicycleType.Tandem);
 
-        assertEquals(funRide.getCountForType(BicycleType.Tandem),7);
+        assertEquals(funRide.getCountForType(tandem.getBicycleType()),7);
     }
 
     @Test
     public void getCountForTypeRoadBike() {
+        BicycleSpecification mountainBike = new BicycleSpecification(3,2,BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(7,4,BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(5,3,BicycleType.RoadBike);
         FunRide funRide = new FunRide(8);
-        MountainBike mountainBike = new MountainBike(BicycleType.MountainBike);
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
-        Tandem tandem = new Tandem(BicycleType.Tandem);
+
         funRide.accept(mountainBike);
         funRide.accept(roadBike);
         funRide.accept(roadBike);
@@ -73,15 +77,16 @@ public class FunRideTest {
         funRide.accept(roadBike);
         funRide.accept(tandem);
 
-        assertEquals(funRide.getCountForType(BicycleType.RoadBike),4);
+        assertEquals(funRide.getCountForType(roadBike.getBicycleType()),4);
     }
 
     @Test
     public void errorHandlingForFunRide() {
+        BicycleSpecification mountainBike = new BicycleSpecification(3,2,BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(7,4,BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(5,3,BicycleType.RoadBike);
         FunRide funRide = new FunRide(5);
-        MountainBike mountainBike = new MountainBike(BicycleType.MountainBike);
-        RoadBike roadBike = new RoadBike(BicycleType.RoadBike);
-        Tandem tandem = new Tandem(BicycleType.Tandem);
+
         funRide.accept(mountainBike);
         funRide.accept(mountainBike);
         funRide.accept(roadBike);
