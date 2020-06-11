@@ -5,6 +5,10 @@ import bicycles.BicycleBase;
 public class Tandem extends BicycleBase {
     private BicycleType bicycleType;
 
+    public Tandem(BicycleType bicycleType) {
+        this.bicycleType = bicycleType;
+    }
+
     @Override
     public void accelerate() {
         changeSpeed(12);

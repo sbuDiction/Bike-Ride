@@ -5,6 +5,10 @@ import bicycles.BicycleBase;
 public class MountainBike extends BicycleBase {
     private BicycleType bicycleType;
 
+    public MountainBike(BicycleType bicycleType) {
+        this.bicycleType = bicycleType;
+    }
+
     @Override
     public void accelerate() {
             changeSpeed(5);

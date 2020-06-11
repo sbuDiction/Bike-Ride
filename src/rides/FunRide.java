@@ -16,11 +16,11 @@ public class FunRide {
     }
 
     public boolean accept(Bicycle bicycle) {
-        System.out.println(bicycle);
-        BicycleType bicycleType = bicycle.getBicycleType();
-        System.out.println(bicycleType + " accept method");
+//        System.out.println(bicycle);
+//        BicycleType bicycleType = bicycle.getBicycleType();
+        System.out.println(bicycle.getBicycleType() + " accept method");
         if ((bikes.size() < bikesLimit)) {
-//            bikes.add(bicycleType);
+            bikes.add(bicycle);
             count++;
             System.out.println(count);
         }else {
