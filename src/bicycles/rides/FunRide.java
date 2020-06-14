@@ -1,7 +1,7 @@
-package rides;
+package bicycles.rides;
 
 import bicycles.Bicycle;
-import models.BicycleType;
+import bicycles.models.BicycleType;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class FunRide {
 
     public boolean accept(Bicycle bicycle) {
         System.out.println(bicycle);
-        if ((bikes.size() < bikesLimit)) {
+        if ((!bikes.contains(bicycle) && bikes.size() < bikesLimit)) {
             bikes.add(bicycle);
         }else {
             return false;

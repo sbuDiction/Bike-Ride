@@ -1,7 +1,7 @@
-package specification;
+package bicycles.specification;
 
-import models.BicycleType;
-import models.RoadBike;
+import bicycles.models.BicycleType;
+import bicycles.models.RoadBike;
 
 
 public class BicycleSpecification extends RoadBike {

@@ -1,6 +1,6 @@
 package bicycles;
 
-import models.Tandem;
+import bicycles.models.Tandem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

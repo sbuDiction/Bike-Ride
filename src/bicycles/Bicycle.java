@@ -1,10 +1,8 @@
 package bicycles;
 
-
-import models.BicycleType;
+import bicycles.models.BicycleType;
 
 public interface Bicycle {
-
       void accelerate();
       void brake();
       int currentSpeed();

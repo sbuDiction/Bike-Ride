@@ -1,6 +1,6 @@
 package bicycles;
 
-import models.BicycleType;
+import bicycles.models.BicycleType;
 
 public abstract class BicycleBase implements Bicycle  {
 
