@@ -2,7 +2,7 @@ package bicycles;
 
 import bicycles.models.BicycleType;
 
-public abstract class BicycleBase implements Bicycle  {
+public abstract class BicycleBase implements Bicycle {
 
     private int speed;
     private BicycleType bicycleType;
@@ -13,7 +13,6 @@ public abstract class BicycleBase implements Bicycle  {
 
     @Override
     public int currentSpeed() {
-        System.out.println(speed + " speed level");
         return speed;
     }
 

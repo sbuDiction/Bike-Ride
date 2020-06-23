@@ -1,4 +1,4 @@
-package rides;
+package bicycles.rides;
 
 import bicycles.BikeRideOne;
 import bicycles.models.MountainBike;

@@ -16,7 +16,6 @@ public class FunRide {
     }
 
     public boolean accept(Bicycle bicycle) {
-        System.out.println(bicycle);
         if ((!bikes.contains(bicycle) && bikes.size() < bikesLimit)) {
             bikes.add(bicycle);
         }else {

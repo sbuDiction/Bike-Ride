@@ -1,4 +1,4 @@
-package specification;
+package bicycles.specification;
 
 import bicycles.models.BicycleType;
 import bicycles.specification.BicycleSpecification;
@@ -10,11 +10,11 @@ public class BicycleSpecificationTest {
 
     @Test
     public void specificationTest() {
-        BicycleSpecification bicycleSpecification = new BicycleSpecification(20,5,BicycleType.MountainBike);
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(20,-5,BicycleType.MountainBike);
 
 
         assertEquals(bicycleSpecification.getAccelerationSpeed(),20,"Should be able to get the acceleration speed");
-        assertEquals(bicycleSpecification.getBrakeSpeed(),5,"Should be able to get the brake speed");
+        assertEquals(bicycleSpecification.getBrakeSpeed(),-5,"Should be able to get the brake speed");
         assertEquals(bicycleSpecification.getBicycleType(), BicycleType.MountainBike);
     }
 }

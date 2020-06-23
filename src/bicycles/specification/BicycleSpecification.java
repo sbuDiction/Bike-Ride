@@ -27,7 +27,6 @@ public class BicycleSpecification extends RoadBike {
     }
 
     public BicycleType getBicycleType(){
-        System.out.println(bicycleType + " type what");
         return bicycleType;
     }
 }
